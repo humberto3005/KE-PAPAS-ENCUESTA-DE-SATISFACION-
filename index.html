@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción - KE-PAPAS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background-color: #1e1e1e;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+            border: 1px solid #333;
+        }
+
+        .header-img {
+            width: 100%;
+            display: block;
+            background-color: #000;
+        }
+
+        .header-title {
+            text-align: center;
+            padding: 20px 15px 5px 15px;
+        }
+
+        .header-title h1 {
+            color: #ff2a2a;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .header-title p {
+            color: #cccccc;
+            font-size: 14px;
+        }
+
+        form {
+            padding: 20px;
+        }
+
+        .question-group {
+            margin-bottom: 22px;
+            background-color: #282828;
+            padding: 16px;
+            border-radius: 12px;
+            border-left: 4px solid #e31b23;
+        }
+
+        .question-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            background-color: #333333;
+            padding: 12px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.1s ease;
+            font-size: 15px;
+        }
+
+        .option-label:hover {
+            background-color: #3d3d3d;
+        }
+
+        .option-label:active {
+            background-color: #e31b23;
+        }
+
+        .option-label input[type="radio"],
+        .option-label input[type="checkbox"] {
+            margin-right: 12px;
+            accent-color: #e31b23;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .icon {
+            font-size: 1.2rem;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            background-color: #333;
+            border: 1px solid #444;
+            border-radius: 8px;
+            color: #fff;
+            padding: 12px;
+            font-size: 14px;
+            resize: none;
+            outline: none;
+        }
+
+        textarea:focus {
+            border-color: #e31b23;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #e31b23;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 12px rgba(227, 27, 35, 0.4);
+        }
+
+        .submit-btn:hover {
+            background-color: #c11219;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Reemplaza 'ke-papas.jpeg' por la ruta o URL de tu imagen -->
+        <img src="ke-papas.jpeg" alt="KE-PAPAS Burgers al Carbón" class="header-img">
+
+        <div class="header-title">
+            <h1>ENCUESTA DE SATISFACCIÓN</h1>
+            <p>¡Ayúdanos a mejorar! Tus comentarios van directo a nuestra gerencia.</p>
+        </div>
+
+        <!-- Servicio de envío directo por FormSubmit -->
+        <form action="https://formsubmit.co/joellopezjw@hotmail.com" method="POST">
+            <!-- Configuración FormSubmit -->
+            <input type="hidden" name="_subject" value="Nueva Encuesta de Satisfacción - KE-PAPAS">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- Pregunta 1 -->
+            <div class="question-group">
+                <div class="question-title">1. ¿Cómo fue el trato y servicio?</div>
+                <div class="options-container">
+                    <label class="option-label">
+                        <input type="radio" name="1_Trato_y_Servicio" value="Excelente" required>
+                        <span class="icon">🤩</span> Excelente
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="1_Trato_y_Servicio" value="Bueno">
+                        <span class="icon">😊</span> Bueno
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="1_Trato_y_Servicio" value="Regular">
+                        <span class="icon">😐</span> Regular
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="1_Trato_y_Servicio" value="Mal Servicio">
+                        <span class="icon">😡</span> Mal Servicio
+                    </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="question-group">
+                <div class="question-title">2. ¿Qué tal el sabor y la calidad de la comida?</div>
+                <div class="options-container">
+                    <label class="option-label">
+                        <input type="radio" name="2_Sabor_y_Calidad" value="Delicioso" required>
+                        <span class="icon">😋</span> Delicioso
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="2_Sabor_y_Calidad" value="Bueno">
+                        <span class="icon">👍</span> Bueno
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="2_Sabor_y_Calidad" value="Aceptable">
+                        <span class="icon">😐</span> Aceptable
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="2_Sabor_y_Calidad" value="No me agradó">
+                        <span class="icon">🤢</span> No me agradó
+                    </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="question-group">
+                <div class="question-title">3. ¿El tiempo de espera fue el adecuado?</div>
+                <div class="options-container">
+                    <label class="option-label">
+                        <input type="radio" name="3_Tiempo_de_Espera" value="Rápido" required>
+                        <span class="icon">⚡</span> Rápido
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="3_Tiempo_de_Espera" value="Normal">
+                        <span class="icon">⏱️</span> Normal
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="3_Tiempo_de_Espera" value="Tardó más de lo esperado">
+                        <span class="icon">🐢</span> Tardó más de lo esperado
+                    </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="question-group">
+                <div class="question-title">4. ¿En qué podemos mejorar? (Puedes seleccionar varias)</div>
+                <div class="options-container">
+                    <label class="option-label">
+                        <input type="checkbox" name="4_Puntos_a_Mejorar[]" value="Tiempo de preparación">
+                        <span class="icon">⏳</span> Tiempo de preparación
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="4_Puntos_a_Mejorar[]" value="Servicio y trato al cliente">
+                        <span class="icon">🤝</span> Servicio y trato al cliente
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="4_Puntos_a_Mejorar[]" value="Sabor o temperatura de la comida">
+                        <span class="icon">🍔</span> Sabor o temperatura de la comida
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="4_Puntos_a_Mejorar[]" value="Precisión del pedido">
+                        <span class="icon">🎯</span> Precisión del pedido
+                    </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="question-group">
+                <div class="question-title">5. Comentarios o sugerencias adicionales:</div>
+                <textarea name="5_Comentarios_o_Sugerencias" placeholder="Escribe aquí tus comentarios..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Enviar Encuesta</button>
+        </form>
+
+        <div class="footer">
+            <p>© KE-PAPAS - Burgers al Carbón</p>
+        </div>
+    </div>
+
+</body>
+</html>
